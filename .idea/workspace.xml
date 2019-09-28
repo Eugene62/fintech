@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31ee921-5b5a-468b-929b-9956a3655afb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/second_task_v2.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/second_task.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/second_task.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Second_taskKt">
+  <component name="RunManager" selected="Kotlin.Second_task_v2Kt">
     <configuration name="First_taksKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="fintech" />
       <option name="VM_PARAMETERS" />
@@ -79,8 +79,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Second_task_v2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="fintech" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Second_task_v2Kt" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Second_task_v2Kt" />
         <item itemvalue="Kotlin.Second_taskKt" />
         <item itemvalue="Kotlin.First_taksKt" />
       </list>
@@ -117,6 +131,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Сделал поиск минимального значения по массиву. И попытался сделать коммит через IDE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал поиск минимального значения по массиву. И попытался сделать коммит через IDE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
