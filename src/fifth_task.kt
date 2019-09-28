@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
 }
 
 fun isCapitalized(s: String?): Boolean {
-val regexForStr = "[A-Z].*".toRegex()
+val regexForStr = "[\\p{Lu}].*".toRegex()
     if (s!!.matches(regexForStr))
         return true
     else
