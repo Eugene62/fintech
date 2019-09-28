@@ -1,12 +1,12 @@
 fun main(args:Array<String>){
 
-    var inputData:IntArray = intArrayOf(9, 15, 5, 2, 1, 3, 4 , 7, 10, 12)
+    var inputData:ArrayList<Int> = arrayListOf(9, 15, 5, 2, 1, 3, 4 , 7, 10, 12, 22, 43, 5, 4, 26)
 
     for (i in mySort(inputData))
-    println(i)
+    print("$i ")
 }
 
-fun mySort(inputArray: IntArray):IntArray {
+fun mySort(inputArray: ArrayList<Int>):ArrayList<Int> {
     if ( inputArray.size < 2)
         return inputArray
     else {
@@ -21,7 +21,6 @@ fun mySort(inputArray: IntArray):IntArray {
             else
                 greater.add(inputArray[i])
 
-        return mySort(less.toIntArray()) + supElem + mySort(greater.toIntArray())
-
+        return (mySort(less) + supElem + mySort(greater)) as ArrayList<Int>
     }
 }
