@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31ee921-5b5a-468b-929b-9956a3655afb" name="Default Changelist" comment="Сделал функцию принимающую на вход число и строку и печатующую ее нужное количество раз.">
-      <change afterPath="$PROJECT_DIR$/src/sixth_task.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sixth_task.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/sixth_task.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Fifth_taskKt">
+  <component name="RunManager" selected="Kotlin.Sixth_taskKt">
     <configuration name="Fifth_taskKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="fintech" />
       <option name="VM_PARAMETERS" />
@@ -80,14 +80,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Second_task_v2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="Six_task_v2Kt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="fintech" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Second_task_v2Kt" />
+      <option name="MAIN_CLASS_NAME" value="Six_task_v2Kt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -121,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Fifth_taskKt" />
         <item itemvalue="Kotlin.Sixth_taskKt" />
+        <item itemvalue="Kotlin.Six_task_v2Kt" />
+        <item itemvalue="Kotlin.Fifth_taskKt" />
         <item itemvalue="Kotlin.Fourth_taskKt" />
         <item itemvalue="Kotlin.Third_taskKt" />
-        <item itemvalue="Kotlin.Second_task_v2Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +183,11 @@
           <url>file://$PROJECT_DIR$/src/second_task.kt</url>
           <line>4</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/sixth_task.kt</url>
+          <line>2</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
