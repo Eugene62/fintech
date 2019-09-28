@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f31ee921-5b5a-468b-929b-9956a3655afb" name="Default Changelist" comment="Сделал функцию принимающую на вход число и строку и печатующую ее нужное количество раз." />
+    <list default="true" id="f31ee921-5b5a-468b-929b-9956a3655afb" name="Default Changelist" comment="Сделал функцию принимающую на вход число и строку и печатующую ее нужное количество раз.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,15 +51,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.Fourth_taskKt">
-    <configuration name="First_taksKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Kotlin.Fifth_taskKt">
+    <configuration name="Fifth_taskKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="fintech" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="First_taksKt" />
+      <option name="MAIN_CLASS_NAME" value="Fifth_taskKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Fifth_taskKt" />
         <item itemvalue="Kotlin.Fourth_taskKt" />
         <item itemvalue="Kotlin.Third_taskKt" />
         <item itemvalue="Kotlin.Second_task_v2Kt" />
         <item itemvalue="Kotlin.Second_taskKt" />
-        <item itemvalue="Kotlin.First_taksKt" />
       </list>
     </recent_temporary>
   </component>
