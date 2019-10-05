@@ -8,12 +8,23 @@ open class AnotherCat() {
     open fun voice() {
         println("Meow meow meow!!!")
     }
+    open fun hunt () {
+        println("Я охочусь на мышей, ведь я кот!")
+    }
 }
 
 class HomeCat( val ownerName: String ): AnotherCat()
 {
     override fun voice() {
         println("Meoooooow! Feed me, $ownerName!")
+    }
+
+    fun hurt( decision: Boolean )
+    {
+        if ( decision )
+            run{ super<AnotherCat>.hunt() }
+        else
+            println( "Ты че сдурел? Какие мыши? Иди корми меня, ленивая задница!" )
     }
 }
 
@@ -34,5 +45,7 @@ fun main(args: Array<String>) {
     repeat(num) {
         makeCatVoice(usualCat)
         makeCatVoice(homeCat)
+        homeCat.hurt( true )
+        homeCat.hurt( false )
     }
 }
