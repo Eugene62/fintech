@@ -8,7 +8,7 @@ abstract class AbstractPet(  val name:String, val age:Int ){
     protected var mealTakingCount : Int = 0
     abstract protected val petDescription : String
     abstract fun getCommands(): Array<String>
-    abstract fun proccedCommand( command:String )
+    abstract fun proccedCommand( command:String? )
 
     fun mealTaking(){
         println( messageForMealTaking )

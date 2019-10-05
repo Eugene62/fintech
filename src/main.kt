@@ -49,7 +49,7 @@ fun main( args: Array<String> ) {
 
     do {
         val tempStr : String? = readLine()
-        player?.proccedCommand( processQuit( tempStr ) )
+        player?.proccedAnimalCommand( processQuit( tempStr ) )
 
     }while ( circle != false )
 }

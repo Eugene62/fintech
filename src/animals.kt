@@ -4,7 +4,7 @@ package ru.tinkoff
 * Класс описывающий поведение собаки. Может ходить, ползать, плавать и подовать голос.
  */
 class Dog( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimable, Crawlable, Voiceable {
-    override fun proccedCommand(command: String) {
+    override fun proccedCommand(command: String?) {
         when ( command )
         {
             "walk" -> return this.walk()
@@ -47,7 +47,7 @@ class Dog( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimab
 * Класс описывающий поведение кошки. Может ходить, ползать, плавать и подовать голос.
  */
 class Cat( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimable, Crawlable, Voiceable {
-    override fun proccedCommand(command: String) {
+    override fun proccedCommand(command: String?) {
         when ( command )
         {
             "walk" -> return this.walk()
@@ -90,7 +90,7 @@ class Cat( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimab
 * Класс описывающий поведение попугая. Может ходить, летать и подовать голос.
  */
 class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walkable, Voiceable {
-    override fun proccedCommand(command: String) {
+    override fun proccedCommand(command: String?) {
         when ( command )
         {
             "walk" -> return this.walk()
@@ -103,7 +103,7 @@ class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walk
     }
 
     override fun getCommands(): Array<String> {
-        return arrayOf( "walk", "fly", "voice", "play", "clean" )
+        return arrayOf( "walk", "fly", "voice", "play", "meal", "clean" )
     }
 
     override val petDescription: String = "птица"
@@ -128,7 +128,7 @@ class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walk
 * Класс описывающий поведение рыбы. Может плавать и подовать голос.
  */
 class Fish( name: String, age: Int ) : AbstractPet( name, age ), Swimable, Voiceable {
-    override fun proccedCommand(command: String) {
+    override fun proccedCommand(command: String?) {
         when ( command )
         {
             "swim" -> return this.swim()
@@ -161,7 +161,7 @@ class Fish( name: String, age: Int ) : AbstractPet( name, age ), Swimable, Voice
 * Класс описывающий поведение змеи. Может ползать и подовать голос.
  */
 class Snake( name: String, age: Int ) : AbstractPet( name, age ), Crawlable, Voiceable{
-    override fun proccedCommand(command: String) {
+    override fun proccedCommand(command: String?) {
         when ( command )
         {
             "crawl" -> return this.crawl()
@@ -173,7 +173,7 @@ class Snake( name: String, age: Int ) : AbstractPet( name, age ), Crawlable, Voi
     }
 
     override fun getCommands(): Array<String> {
-        return arrayOf( "swim", "voice", "meal", "play", "clean" )
+        return arrayOf( "crawl", "voice", "meal", "play", "clean" )
     }
 
     override val petDescription: String = "змея"

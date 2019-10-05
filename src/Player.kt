@@ -6,7 +6,7 @@ class Player( val animal : AbstractPet ) {
             println( i )
     }
 
-    fun proccedCommand( command: String? ){
-        animal.run { proccedCommand( command ) }
+    fun proccedAnimalCommand( command: String? ){
+        animal.run { this.proccedCommand( command ) }
     }
 }
