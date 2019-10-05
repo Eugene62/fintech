@@ -1,2 +1,0 @@
-firstLine in feature
-secondLine in develop
