@@ -1,5 +1,7 @@
 package ru.tinkoff
 
+import kotlin.system.exitProcess
+
 abstract class AbstractPet(  val name:String, val age:Int ){
     abstract protected val messageForPlaytime : String
     protected var isCleanInHabitat : Boolean = true
@@ -13,16 +15,16 @@ abstract class AbstractPet(  val name:String, val age:Int ){
     fun mealTaking(){
         println( messageForMealTaking )
         ++mealTakingCount
+        if (mealTakingCount == 2) leave()
         if ( mealTakingCount > 0 ) {
-                isCleanInHabitat = false
+            isCleanInHabitat = false
             println( "Не забудь убраться в $habitat")
             }
     }
 
     fun leave(){
-        if ( !isCleanInHabitat && mealTakingCount >= 2 )
             println( "Ваша $petDescription, покинула вас " )
-        TODO("Дописать выход из программы")
+            exitProcess(0 )
     }
 
     fun cleanAfterMe(){

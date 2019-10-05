@@ -2,14 +2,10 @@ package ru.tinkoff
 
 import kotlin.system.exitProcess
 
-fun printGreeting() {
-    println("Добро пожаловать в игру \"Томагочи\"")
-}
-
-fun printMenu() : String? {
-    println( "Выберите действие:" )
-    println( "1. Выбрать питомца" )
-    println( "Введите \"q\" для выхода" )
+fun choosePet() : String? {
+    val availablePets = listOf<String>( "Dog", "Cat", "Parrot", "Fish", "Snake" )
+    for ( i in availablePets )
+        println( "$i" )
     return processQuit( readLine() )
 }
 
@@ -29,21 +25,13 @@ fun main( args: Array<String> ) {
     val snake : Snake = Snake("Kaa", 48 )
     val fish : Fish = Fish("Nemo", 2 )
 
-    val availablePets = listOf<String>( "Dog", "Cat", "Parrot", "Fish", "Snake" )
     val zoo: Map<String, AbstractPet> = mapOf( "Dog" to dog , "Cat" to cat, "Parrot" to parrot, "Fish" to fish, "Snake" to snake )
-
-    val circle = true
-    printGreeting()
+    
+    println("Добро пожаловать в игру \"Томагочи\"")
     println("Для выбора животного введите его название")
-    if ( printMenu()?.toInt() == 1 )
-        for ( i in availablePets )
-            println( "$i" )
+    println( "Введите \"q\" для выхода" )
 
-    val selectedPet : String = readLine().toString()
-
-    val pet = zoo[selectedPet]
-
-    val player: Player? = zoo[selectedPet]?.let { Player(it) }
+    val player: Player? = zoo[choosePet()]?.let { Player(it) }
 
     player?.printAvailableCommands()
 
@@ -51,5 +39,5 @@ fun main( args: Array<String> ) {
         val tempStr : String? = readLine()
         player?.proccedAnimalCommand( processQuit( tempStr ) )
 
-    }while ( circle != false )
+    }while ( true )
 }
