@@ -1,4 +1,4 @@
-package rutinkoff
+package ru.tinkoff
 
 fun main( args: Array<String> ) {
     val dog = Dog("Goofy", 23u )
