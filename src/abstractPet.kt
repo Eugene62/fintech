@@ -5,7 +5,8 @@ abstract class AbstractPet(  val name:String, val age:Int ){
     protected var isCleanInHabitat : Boolean = true
     abstract protected val habitat : String
     abstract protected val messageForMealTaking : String
-    protected var mealTakingCount: Int = 0
+    protected var mealTakingCount : Int = 0
+    abstract protected val petDescription : String
 
     fun mealTaking(){
         println( messageForMealTaking )
@@ -14,6 +15,12 @@ abstract class AbstractPet(  val name:String, val age:Int ){
                 isCleanInHabitat = false
             println( "Не забудь убраться в $habitat")
             }
+    }
+
+    fun leave(){
+        if ( !isCleanInHabitat && mealTakingCount >= 2 )
+            println( "Ваша $petDescription, покинула вас " )
+        TODO("Дописать выход из программы")
     }
 
     fun cleanAfterMe(){
