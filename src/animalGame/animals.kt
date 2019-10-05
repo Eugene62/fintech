@@ -4,7 +4,8 @@ package ru.tinkoff
 * Класс описывающий поведение собаки. Может ходить, ползать, плавать и подовать голос.
  */
 class Dog( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimable, Crawlable, Voiceable {
-    override fun proccedCommand(command: String?) {
+
+    override fun proccedCommand(command: String) {
         when ( command )
         {
             "walk" -> return this.walk()
@@ -47,7 +48,7 @@ class Dog( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimab
 * Класс описывающий поведение кошки. Может ходить, ползать, плавать и подовать голос.
  */
 class Cat( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimable, Crawlable, Voiceable {
-    override fun proccedCommand(command: String?) {
+    override fun proccedCommand(command: String) {
         when ( command )
         {
             "walk" -> return this.walk()
@@ -65,7 +66,7 @@ class Cat( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimab
     }
 
     override val petDescription: String = "кошка"
-    override val messageForMealTaking: String = "С явным недовольством смотрит на еду в миске, но так происхдит всегда, не смотря на то что в ней лежит"
+    override val messageForMealTaking: String = "С явным недовольством смотрит на еду в миске, но так происходит всегда, не смотря на то что в ней лежит"
     override val habitat: String = "кошачей лежашке( не обманывайте себя, эта квартира принадлежит кошке на самом деле, а не вам )"
     override val messageForPlaytime: String = "Кошка приходит к вам на колени и ждет что вы погладите ее. К сожалению вы гладите не в том месте, она царапает вас и уходит"
 
@@ -90,7 +91,7 @@ class Cat( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimab
 * Класс описывающий поведение попугая. Может ходить, летать и подовать голос.
  */
 class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walkable, Voiceable {
-    override fun proccedCommand(command: String?) {
+    override fun proccedCommand(command: String) {
         when ( command )
         {
             "walk" -> return this.walk()
@@ -107,12 +108,12 @@ class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walk
     }
 
     override val petDescription: String = "птица"
-    override val messageForMealTaking: String = "Вы наыпаете еды в кормушку. Попугай прекращает грызть клавиатуру ноутбука и летит к кормушке"
+    override val messageForMealTaking: String = "Вы насыпаете еды в кормушку. Попугай прекращает грызть клавиатуру ноутбука и летит к кормушке"
     override val habitat: String = "клетке"
     override val messageForPlaytime: String = "Безбашенно летает по комнате, периодичеки изображая из себя японского камикадзе"
 
     override fun fly() {
-        println( "Летает, в поискх цели для рстерзания")
+        println( "Летает, в поисках цели для растерзания")
     }
 
     override fun walk() {
@@ -128,7 +129,7 @@ class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walk
 * Класс описывающий поведение рыбы. Может плавать и подовать голос.
  */
 class Fish( name: String, age: Int ) : AbstractPet( name, age ), Swimable, Voiceable {
-    override fun proccedCommand(command: String?) {
+    override fun proccedCommand(command: String) {
         when ( command )
         {
             "swim" -> return this.swim()
@@ -161,7 +162,7 @@ class Fish( name: String, age: Int ) : AbstractPet( name, age ), Swimable, Voice
 * Класс описывающий поведение змеи. Может ползать и подовать голос.
  */
 class Snake( name: String, age: Int ) : AbstractPet( name, age ), Crawlable, Voiceable{
-    override fun proccedCommand(command: String?) {
+    override fun proccedCommand(command: String) {
         when ( command )
         {
             "crawl" -> return this.crawl()
@@ -178,7 +179,7 @@ class Snake( name: String, age: Int ) : AbstractPet( name, age ), Crawlable, Voi
 
     override val petDescription: String = "змея"
     override val messageForMealTaking: String =  "Так как вы все еще не знаете где змея, вы просто выпускаете мышей в квартире"
-    override val habitat: String = "Вы все еще не знаете где змея, поэтому убираетесь во всей квартире"
+    override val habitat: String = "в квартире, потому что вы все еще не знаете где змея"
     override val messageForPlaytime: String = "Вы не понимаете зачем вы завели змею и боитесь с ней играть. Да даже если бы и не боялись, вы все равно не знаете где она"
 
     override fun crawl() {
