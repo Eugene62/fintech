@@ -5,8 +5,8 @@ import java.util.Scanner
 class Car() {
     fun ride(km: Int) {
         var distanse = km
-        println("поехали!")
-        while ( distanse != 0 ) {
+        println("Поехали!")
+        repeat(km) {
             println("Осталось $distanse километров")
             --distanse
         }
