@@ -3,9 +3,12 @@ package ru.tinkoff
 /*
 * Класс описывающий поведение собаки. Может ходить, ползать, плавать и подовать голос.
  */
-class Dog( val name: String, val age: UInt ): Walkable, Swimable, Crawlable, Voiceable {
+class Dog( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimable, Crawlable, Voiceable {
+    override val messageForMealTaking: String = "Радостно уплетает корм из миски"
+    override val habitat: String = "конуре"
+    override val messageForPlaytime: String = "Вы бросаете палку, радостный пес убегает и приносит ее"
 
-    override fun walk(){
+    override fun walk() {
         println( "Ходит по собачьи, виляя хвостом" )
     }
 
@@ -14,7 +17,7 @@ class Dog( val name: String, val age: UInt ): Walkable, Swimable, Crawlable, Voi
     }
 
     override fun crawl() {
-        println( "Ползает по собачьи" )
+        println( "Ползает по собачьи, подкрадывается к вам и кусает за ногу" )
     }
 
     override fun voice() {
@@ -25,9 +28,12 @@ class Dog( val name: String, val age: UInt ): Walkable, Swimable, Crawlable, Voi
 /*
 * Класс описывающий поведение кошки. Может ходить, ползать, плавать и подовать голос.
  */
-class Cat(val name: String, val age: UInt): Walkable, Swimable, Crawlable, Voiceable {
+class Cat( name: String, age: Int ) : AbstractPet( name, age ), Walkable, Swimable, Crawlable, Voiceable {
+    override val messageForMealTaking: String = "С явным недовольством смотрит на еду в миске, но так происхдит всегда, не смотря на то что в ней лежит"
+    override val habitat: String = "кошачей лежашке( не обманывайте себя, эта квартира принадлежит кошке на самом деле, а не вам )"
+    override val messageForPlaytime: String = "Кошка приходит к вам на колени и ждет что вы погладите ее. К сожалению вы гладите не в том месте, она царапает вас и уходит"
 
-    override fun walk(){
+    override fun walk() {
         println( "Ходит по кошачьи, высокомерно поглядывая по сторонам" )
     }
 
@@ -47,14 +53,17 @@ class Cat(val name: String, val age: UInt): Walkable, Swimable, Crawlable, Voice
 /*
 * Класс описывающий поведение попугая. Может ходить, летать и подовать голос.
  */
-class Parrot(val name: String, val age: UInt) : Flyeble, Walkable, Voiceable {
+class Parrot( name: String, age: Int ) : AbstractPet( name, age ), Flyeble, Walkable, Voiceable {
+    override val messageForMealTaking: String = "Вы наыпаете еды в кормушку. Попугай прекращает грызть клавиатуру ноутбука и летит к кормушке"
+    override val habitat: String = "клетке"
+    override val messageForPlaytime: String = "Безбашенно летает по комнате, периодичеки изображая из себя японского камикадзе"
 
     override fun fly() {
         println( "Летает, в поискх цели для рстерзания")
     }
 
     override fun walk() {
-        println( "{Ходит, хотя и не понимает зачем ему это нужно" )
+        println( "Ходит, хотя и не понимает зачем ему это нужно" )
     }
 
     override fun voice() {
@@ -63,23 +72,29 @@ class Parrot(val name: String, val age: UInt) : Flyeble, Walkable, Voiceable {
 }
 
 /*
-* Класс описывающий поведение попугая. Может плавать и подовать голос.
+* Класс описывающий поведение рыбы. Может плавать и подовать голос.
  */
-class Fish(val name: String, val age: UInt) : Swimable, Voiceable {
+class Fish( name: String, age: Int ) : AbstractPet( name, age ), Swimable, Voiceable {
+    override val messageForMealTaking: String = "Вы бросаете еду в аквариум. Рыбка подплывает, кушает и плывет на дно. Спустя три секунды возвращается обратно  к корму"
+    override val habitat: String = "аквариуме"
+    override val messageForPlaytime: String = "Плавает кругами"
 
     override fun swim() {
         println( "Хаотично передвигается по аквариуму" )
     }
 
     override fun voice() {
-        println( "Вы стучите рукой по стеклу аквариума в надежде что рыбка подаст голос. Она смотрит на вас недоумевающим взглядом и уплывает" )
+        println( "Вы стучите рукой по стеклу аквариума в надежде что рыбка подаст голос. Она смотрит на вас недоумевающим взглядом и уплывает. Возвращается спустя три секунды" )
     }
 }
 
 /*
 * Класс описывающий поведение змеи. Может ползать и подовать голос.
  */
-class Snake(val name: String, val age: UInt) : Crawlable, Voiceable{
+class Snake( name: String, age: Int ) : AbstractPet( name, age ), Crawlable, Voiceable{
+    override val messageForMealTaking: String =  "Так как вы все еще не знаете где змея, вы просто выпускаете мышей в квартире"
+    override val habitat: String = "Вы все еще не знаете где змея, поэтому убираетесь во всей квартире"
+    override val messageForPlaytime: String = "Вы не понимаете зачем вы завели змею и боитесь с ней играть. Да даже если бы и не боялись, вы все равно не знаете где она"
 
     override fun crawl() {
         println( "Ползет по змеиному" )
