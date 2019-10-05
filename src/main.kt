@@ -1,60 +1,55 @@
 package ru.tinkoff
 
+import kotlin.system.exitProcess
+
+fun printGreeting() {
+    println("Добро пожаловать в игру \"Томагочи\"")
+}
+
+fun printMenu() : String? {
+    println( "Выберите действие:" )
+    println( "1. Выбрать питомца" )
+    println( "Введите \"q\" для выхода" )
+    return processQuit( readLine() )
+}
+
+fun processQuit( strForCheck : String? ) : String? {
+    if ( strForCheck.equals( "q") ) {
+        exitProcess(0 )
+    }
+    else
+        return strForCheck
+}
+
 fun main( args: Array<String> ) {
-    val dog = Dog("Goofy", 23 )
-    val cat = Cat("Tom", 7 )
-    val parrot = Parrot( "Iago", 12 )
-    val snake = Snake( "Kaa", 48 )
-    val fish = Fish( "Nemo", 2 )
 
-    println( dog.name )
-    println( dog.age )
+    val dog : Dog = Dog("Goofy", 13 )
+    val cat : Cat = Cat( "Tom", 5 )
+    val parrot : Parrot = Parrot( "Iago", 7 )
+    val snake : Snake = Snake("Kaa", 48 )
+    val fish : Fish = Fish("Nemo", 2 )
 
-    dog.voice()
-    dog.crawl()
-    dog.swim()
-    dog.walk()
-    dog.playWithMe()
-    dog.mealTaking()
-    dog.mealTaking()
-    dog.cleanAfterMe()
+    val availablePets = listOf<String>( "Dog", "Cat", "Parrot", "Fish", "Snake" )
+    val zoo: Map<String, AbstractPet> = mapOf( "Dog" to dog , "Cat" to cat, "Parrot" to parrot, "Fish" to fish, "Snake" to snake )
 
-    println( cat.name )
-    println( cat.age )
+    val circle = true
+    printGreeting()
+    println("Для выбора животного введите его название")
+    if ( printMenu()?.toInt() == 1 )
+        for ( i in availablePets )
+            println( "$i" )
 
-    cat.voice()
-    cat.cleanAfterMe()
-    cat.crawl()
-    cat.swim()
-    cat.walk()
-    cat.playWithMe()
-    cat.mealTaking()
+    val selectedPet : String = readLine().toString()
 
-    println( parrot.name )
-    println( parrot.age )
+    val pet = zoo[selectedPet]
 
-    parrot.voice()
-    parrot.cleanAfterMe()
-    parrot.fly()
-    parrot.walk()
-    parrot.playWithMe()
-    parrot.mealTaking()
+    val player: Player? = zoo[selectedPet]?.let { Player(it) }
 
-    println( snake.name )
-    println( snake.age )
+    player?.printAvailableCommands()
 
-    snake.voice()
-    snake.cleanAfterMe()
-    snake.crawl()
-    snake.playWithMe()
-    snake.mealTaking()
+    do {
+        val tempStr : String? = readLine()
+        player?.proccedCommand( processQuit( tempStr ) )
 
-    println( fish.name )
-    println( fish.age )
-
-    fish.voice()
-    fish.cleanAfterMe()
-    fish.swim()
-    fish.playWithMe()
-    fish.mealTaking()
+    }while ( circle != false )
 }
