@@ -1,7 +1,9 @@
 package ru.tinkoff
 
-data class Pet(var nickname: String, var age: Int, var sex: String?) {
+open class Pet(var nickname: String, var age: Int, var sex: String?) {
 }
+
+class Dog(name: String, age: Int, sex: String?) : Pet(name, age, sex)
 
 fun Pet.isAdult(): Boolean {
     return if (this.age > 2) return true else false
@@ -9,3 +11,6 @@ fun Pet.isAdult(): Boolean {
 
 val Pet.politeName
     get() = "Dear, ${this.nickname}!"
+
+val Dog.politeName
+    get() = "Dear dog, ${this.nickname}!"
