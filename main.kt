@@ -15,4 +15,13 @@ fun main() {
     println(anotherDog.politeName)
 
     //! В зависимости от типа объявления переменной класса наследника, будет вызвана функция относящаяся к объявленному классу
+
+    val anotherAnotherDog: Dog = Dog("Fluffy", 5, "male")
+    val cat: Cat = Cat("Tom", 7, "male")
+
+    val firstOwner = Owner(anotherAnotherDog)
+    val secondOwner: Owner<Cat> = Owner(cat)
+
+    println(firstOwner.feed())
+    println(secondOwner.feed())
 }
