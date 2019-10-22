@@ -1,8 +1,6 @@
 package ru.tinkoff
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import java.lang.Thread.sleep
 
 fun main() {
@@ -12,22 +10,27 @@ fun main() {
     var fish = Pet("Nemo", 1000)
     var rabbit = Pet("Bugs", 3500)
 
-    GlobalScope.launch {
-        dog.eat()
-    }
-    GlobalScope.launch {
-        cat.eat()
-    }
-    GlobalScope.launch {
-        bird.eat()
-    }
-    GlobalScope.launch {
-        fish.eat()
-    }
-    GlobalScope.launch {
-        rabbit.eat()
+    runBlocking {
+        val dogIsFeed = async {
+            dog.eat()
+        }
+        val catIsFeed = async {
+            cat.eat()
+        }
+        val birdIsFeed = async {
+            bird.eat()
+        }
+        val fishIsFeed = async {
+            fish.eat()
+        }
+        val rabbitIsFeed = async {
+            rabbit.eat()
+        }
+
+        if (dogIsFeed.await() && catIsFeed.await() && birdIsFeed.await() && fishIsFeed.await() && rabbitIsFeed.await())
+            println("Животные покормлены")
     }
 
     sleep(6000)
-    println("Животные покормлены")
+
 }
