@@ -11,6 +11,7 @@ fun main() {
     var bird = Pet("Snuffy", 1500)
     var fish = Pet("Nemo", 1000)
     var rabbit = Pet("Bugs", 3500)
+
     GlobalScope.launch {
         dog.eat()
     }
