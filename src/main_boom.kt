@@ -1,23 +1,11 @@
 package ru.tinkoff
-import java.lang.Exception
 
 fun main() {
-    try {
-        listOf("поезд", "сделал", "one").forEach {
-            if (it == "one") {
-                //throw Exception("boom =)")
-                return
-            }
-            println(it)
+    listOf("three", "two", "one").forEach goto@{
+        if (it == "one") {
+            return@goto
         }
-    } catch (e:Exception){}
-    finally {
-        println("boom!")
+        println(it)
     }
+    println("boom!")
 }
-
-// public inline fun <T> Iterable<T>.forEach(action: (T) -> Unit): Unit {
-//     for (element in this) action(element)
-// }
-// Вот во что развернулся инлайновый forEach. На лекции мы обсуждали недостатки инлайн функций
-// и то что каждый раз создается новый объект при каждом вызове. Можно вылечить с помощью объявления <reified>
